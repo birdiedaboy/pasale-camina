@@ -1,0 +1,159 @@
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <title>Pasale - Camina</title>
+  <meta name="description" content="Pasale">
+  <meta name="author" content="Camina MX">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body> 
+<header>
+	<input type="checkbox" id="nav-toggle" class="nav-toggle">
+	<nav>
+		<ul>
+			<li><a href="#">HISTORIA</a></li>
+			<li><a href="#">VECINOS</a></li>
+			<li><a href="#">EMPRESAS</a></li>
+			<li><a href="#">CONCURSO UNIVERSITARIO</a></li>
+			<li><a href="#">ALIADOS</a></li>
+			<li><a href="#">CONTACTO</a></li>
+		</ul>
+	</nav>
+	<label for="nav-toggle" class="nav-toggle-label">
+		<span></span>
+	</label>
+</header>
+<main>
+    <article>
+      <div class="introPasele">
+        <img src="img/logo_Pasale.svg">
+           <h1>Proyecto de rediseño vial por<br>medio del mobiliario urbano</h1>
+       </div>
+       <img src="img/Aliados.png" class="heroAliados">
+           <section class="Historia">
+           <div class="txtHistoria">
+            <h2>Historia</h2>
+            <p>
+                Convocados por el BID, CAMINA y CityEs! conformamos un equipo para desarrollar Pásale, un
+                proyecto colaborativo con autoridades y vecinos para
+                el rescate y rediseño de espacios públicos que mejoran
+                la movilidad de un barrio o colonia y con ello
+                proporcionar seguridad vial, salud y bienestar.
+                <br><br>
+                El proyecto comenzó en 2019, la primera fase consistió
+                en un estudio de seguridad peatonal en el polígono que
+                comprende 4 de las principales avenidas de las
+                colonias Condesa e Hipódromo; Av. Mazatlán, av.
+                Michoacán, av. Tamaulipas, y Alfonso Reyes. En esta
+                fase se hizo una intervención masiva de urbanismo
+                táctico en 12 de las intersecciones de este polígono,
+                donde se amplió 4,242m2 de espacio peatonal.
+           </p>
+           </div>
+           <img src="img/Historia.png" class="imgHistoria">
+        </section>
+        <section class="Vecinos">
+           <div class="txtVecinos">
+            <h2>Vecinos</h2>
+            <p>Las personas que viven y transitan por el polígono intervenido en el proyecto Pásale podrán gozar de los beneficios que resultarán de la transformación de las intersecciones.</p>
+            </div>
+            <div class="segProCon">
+                <div>
+                    <figure>
+                        <img src="img/icon_Seguridad.svg">
+                    </figure>
+                    <h3>Seguridad</h3>
+                    <p>
+                        Proteger peatones, menos exposición del transeúnte entre una banqueta y otra.
+                        <br><br>
+                        Confinamiento permanente de seis cruces para mejorar la seguridad peatonal 
+                        <br><br>
+                        Recuperar 2,734.2 metros cuadrados en todo el polígono.
+                        <br><br>
+                        Reducir velocidades de automóviles en cruces para disminuir riesgo de colisión con peatones.
+
+
+                    </p>
+                </div>
+                <div>
+                    <figure>
+                        <img src="img/icon_Proteccion.svg">
+                    </figure>
+                    <h3>Protección</h3>
+                    <p>
+                        Percepción de seguridad. Generar sensaciones de confort al transitar por los cruces modificados. Al disminuir las velocidades y acortar la distancia del cruce, la sensación de seguridad aumenta.
+                        <br><br>
+                        Protección de los elementos. Del calor y del viento, a través de la colocación de vegetación
+                    </p>
+                </div>
+                <div>
+                    <figure>
+                        <img src="img/icon_Confort.svg">
+                    </figure>
+                    <h3>Confort</h3>
+                    <p>
+                        Oportunidades para caminar. 
+                        <br><br>
+                        Acortamiento de distancias, al colocar bahías de descanso y ampliar "orejas" en banqueta.
+                        <br><br>
+                        Oportunidades para permanecer. Generación de sombra con mobiliario y vegetación.
+                        <br><br>
+                        Oportunidades para sentarse. Colocación de bancas y otros muebles que inviten al reposo.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="Empresas">
+           <div class="txtEmpresas">
+            <h2>Empresas</h2>
+            <p>Invitamos a todas las empresas mexicanas que diseñen y construyan mobiliario urbano, a participar en el proyecto de rediseño vial Pásale.</p>
+            </div>
+            <div class="btnEmpresas">
+            <button onclick="window.location.href='https://w3docs.com';" target="_blank">
+            CONVOCATORIA PARA EMPRESAS
+            </button>
+            </div>
+        </section>
+        <section class="centroUni">
+            <h2>Concurso Universitario</h2>
+            <p>Proximamente</p>
+            <picture>
+            <img src="img/img_Equipo.png">
+            </picture>
+        </section>
+        <section class="Aliados">
+            <h2>Aliados</h2>
+            <div class="imgAliados">
+                <img src="img/Aliados.png">
+                <img src="img/img_Cuau.png" class="cuau">
+            </div>
+        </section>
+        <section class="Contacto">
+            <h2>¿Dudas o comentarios?</h2>
+            <form method="post" name="contact_form"
+            action="contact-form-handler.php">
+                <label for="Name">Nombre:</label>
+                <input type="text" name="name">
+
+                <label for="Emal">Email:</label>
+                <input type="text" name="email">
+
+                <label for="Mssg">Mensaje:</label>
+                <textarea name="message"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>	
+        </section>
+        
+    </article>
+</main>
+ 
+ 
+  <script src="js/scripts.js"></script>
+</body>
+</html>

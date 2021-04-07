@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+img{
+    display: block;
+    object-fit: contain;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: normal;
+}
+
+:root{
+	--bgColor: #ede7e4;
+    --txtColor: #302c27;
+    --accentBlue: #27a0d7;
+    --accentYellow: #ffbc0b;
+    --accentRed: #e54941;
+    --accentGreen: #89b514;
+    --paddingGeneral: 10rem;
+}
+*,*::before, *::after{
+	box-sizing: border-box;
+}
+body{
+	background: var(--bgColor);
+	font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+h1{
+    font-weight: bold;
+    font-size: 	2.875rem;
+    margin-top: 3rem;
+}
+h2{
+    font-weight: bold;
+    font-size: 	2.875rem;
+    padding-bottom: 3.25rem;
+}
+h3{
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+p{
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+/* Estilo del Nav */
+header{
+	background: var(--bgColor);
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	z-index: 666;
+}
+.logo{
+	margin: 1.5em 0;
+	
+}
+.nav-toggle{
+	display: none;
+}
+.nav-toggle-label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 1em;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+	display: block;
+	background: white;
+	height: 3px;
+	width: 2em;
+	position: relative;
+	
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+	content:'';
+	position: absolute;
+}
+.nav-toggle-label span::before{
+	bottom: 7px;
+}
+.nav-toggle-label span::after{
+	top: 7px;
+}
+nav{
+	position: absolute;
+	text-align: left;
+	top: 100%;
+	left: 0;
+	background: var(--bgColor);
+	width: 100%;
+	transform: scale(1, 0);
+	transform-origin: top;
+	transition: transform 400ms ease-in-out;
+	
+}
+
+nav li {
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+nav a{
+	color: var(--txtColor);
+	text-decoration: none;
+	font-size: 	1.25rem;
+    font-weight: bold;
+	opacity: 0;
+	transition: opacity 150ms ease-in-out;
+}
+nav a:hover{
+	color: var(--accentRed);
+}
+.nav-toggle:checked ~ nav {
+	transform: scale(1,1);
+}
+.nav-toggle:checked ~ nav a {
+	opacity: 1;
+	transition: opacity 250ms ease-in-out 250ms;
+}
+.nav-toggle:checked nav-toggle-label span{
+	opacity: 0;
+}
+.nav-toggle:checked span::before{
+	transform: rotate(45deg);
+}
+.nav-toggle:checked span::after{
+	transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 800px) {
+	.nav-toggle-label{
+		display: none;
+	}
+	header{
+		display: grid;
+		grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        height: 5rem;
+	}
+	.logo{
+		grid-column: 2 / span 1;
+	}
+	nav{
+		all: unset;
+		grid-column: 3 / 4;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	nav ul{ 
+		display: flex;
+	}
+	nav li{
+		margin-left: 3em;
+		margin-bottom: 0;
+	}
+	nav a{
+		opacity: 1;
+		position: relative;
+	}
+	nav a::before {
+		content:'';
+		display: block;
+		height: 4px;
+		background: var(--accentRed);
+		width: 100%;
+		position: absolute;
+		top: -.75em;
+		left: 0;
+		right: 0;
+		transform: scale(0, 1);
+		transform-origin: right;
+		transition: transform ease-in-out 250ms;
+
+	}
+	nav a:hover::before{
+		transform: scale(1,1);
+	}
+    
+    main{
+        padding-top: 5rem;
+        height: 100%;
+        background-color: var(--bgColor)
+    }
+    article{
+/*        border: 1px solid;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        width: 100%;
+    }
+    section{
+/*        background: var(--accentRed);*/
+        margin-top: 5rem;
+    }
+    .heroAliados{
+        margin-top: 25%;
+    }
+    .introPasele{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: var(--paddingGeneral);
+    }
+    .introPasele img{
+        width: 40rem;
+    }
+    .imgHistoria{
+        grid-area: foto;
+        justify-self: center;
+        margin-right: var(--paddingGeneral);
+    }
+    .txtHistoria{
+        grid-area: title;
+        margin-left: var(--paddingGeneral);
+    }
+    .Historia{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "title foto"
+            "title foto"
+            "footer footer";
+        column-gap: 3rem;
+        
+    }
+    .Vecinos{
+        padding-right: var(--paddingGeneral);
+        padding-left: var(--paddingGeneral);
+    }
+    .txtVecinos{
+        width: 50%;
+    }
+    .segProCon{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+        
+    }
+    .segProCon div{
+        width: 30%;
+        
+    }
+    .segProCon div figure{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2rem;
+        height: 13rem;
+        
+    }
+    .Empresas{
+        width: 100%;
+        padding-right: var(--paddingGeneral);
+        padding-left: var(--paddingGeneral);
+    }
+    .txtEmpresas{
+        width: 50%;
+        margin-bottom: 8rem;
+    }
+    .btnEmpresas{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    button{
+        border: none;
+        background-color: var(--txtColor);
+        color: var(--bgColor);
+        font-size: 1.125rem;
+        font-family: 'Inter';
+        font-weight: bold;
+        height: 50px;
+        width: 406px;
+        cursor: pointer;
+    }
+    .centroUni{
+        width: 100%;
+    }
+    .centroUni h2, .centroUni p{
+        padding-right: var(--paddingGeneral);
+        padding-left: var(--paddingGeneral);
+    }
+    .centroUni p{
+        margin-bottom: 5rem;
+    }
+    .centroUni picture img{
+/*        min-width: 100vw;*/
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .Aliados{
+        width: 100%;
+        padding-right: var(--paddingGeneral);
+        padding-left: var(--paddingGeneral);
+        display: flex;
+        flex-direction: column;
+    }
+    .imgAliados{
+        display: flex;
+        justify-content: center;
+    }
+    .cuau{
+        width: 18.75rem;
+    }
+    .Contacto{
+        width: 100%;
+        padding-right: var(--paddingGeneral);
+        padding-left: var(--paddingGeneral);
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    input{
+        height: 3rem;
+        padding: 0;
+        margin: 0;
+        border: none;
+        
+    }
+    
+}
