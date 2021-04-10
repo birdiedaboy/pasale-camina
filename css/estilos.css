@@ -201,8 +201,8 @@ nav a:hover{
     
     main{
         padding-top: 5rem;
-        height: 100%;
-        background-color: var(--bgColor)
+        background-color: var(--bgColor);
+        height: auto;
     }
     article{
 /*        border: 1px solid;*/
@@ -212,10 +212,11 @@ nav a:hover{
         margin-top: 5rem;
         margin-bottom: 5rem;
         width: 100%;
+        height: 100%;
     }
     section{
 /*        background: var(--accentRed);*/
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
     .heroAliados{
         margin-top: 25%;
@@ -226,6 +227,7 @@ nav a:hover{
         flex-direction: column;
         align-items: flex-end;
         padding-right: var(--paddingGeneral);
+        z-index: 2;
     }
     .introPasele img{
         width: 40rem;
@@ -340,12 +342,42 @@ nav a:hover{
         flex-direction: column;
         width: 50%;
     }
+    label{
+        margin-bottom: 1rem;
+        font-size: 	1.5rem;
+        font-weight: bold;
+    }
     input{
         height: 3rem;
         padding: 0;
         margin: 0;
         border: none;
-        
+        margin-bottom: 2rem;   
     }
-    
+    .footy{
+        width: 100%;
+        height: 5rem;
+        background-color: var(--txtColor);
+    }
+    .bgImg{
+        width: 30rem;
+        position: absolute;
+        z-index: 1;
+    }
+    .bg01{
+        top: 150;
+        left: 100;
+    }
+    .bg02{
+        top: 500;
+        left: 400;
+    }
+     .bg03{
+        top: 700;
+        left: 0;
+    }
+    .bg04{
+        top: 800;
+        right: 0;
+    }
 }
