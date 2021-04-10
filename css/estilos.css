@@ -231,6 +231,7 @@ nav a:hover{
     }
     .introPasele img{
         width: 40rem;
+        
     }
     .imgHistoria{
         grid-area: foto;
@@ -250,6 +251,7 @@ nav a:hover{
             "title foto"
             "footer footer";
         column-gap: 3rem;
+        padding-top: 5rem;
         
     }
     .Vecinos{
@@ -280,6 +282,7 @@ nav a:hover{
         width: 100%;
         padding-right: var(--paddingGeneral);
         padding-left: var(--paddingGeneral);
+        margin-bottom: 15rem;
     }
     .txtEmpresas{
         width: 50%;
@@ -324,6 +327,10 @@ nav a:hover{
         padding-left: var(--paddingGeneral);
         display: flex;
         flex-direction: column;
+        background-color: white;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        margin-top: 0;
     }
     .imgAliados{
         display: flex;
@@ -379,5 +386,32 @@ nav a:hover{
     .bg04{
         top: 800;
         right: 0;
+    }
+    .bg05{
+        top: 1500;
+        right: 0;
+        z-index: -1;
+        width: 70rem
+    }
+    .bg06{
+        top: 2000;
+        left: 0;
+        z-index: -1;
+    }
+    .bg07{
+        top: 2750;
+        right: 0;
+        width: 35rem;
+    }
+    .bg08{
+        top: 2990;
+        left: 200;
+        width: 22rem;
+    }
+    .bg09{
+        bottom:-4300;
+        left: 0;
+        z-index: -1;
+        width: 25rem;
     }
 }
