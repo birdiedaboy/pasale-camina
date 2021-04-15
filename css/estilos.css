@@ -88,7 +88,7 @@ header{
 .nav-toggle-label span::before,
 .nav-toggle-label span::after{
 	display: block;
-	background: white;
+	background: var(--txtColor);
 	height: 3px;
 	width: 2em;
 	position: relative;
@@ -174,7 +174,10 @@ article{
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding: 0 2rem 0 2rem;
+    margin: 0 2rem 0 2rem;
+}
+section{
+    margin-top: 5rem;
 }
 .txtHistoria{
     margin-bottom: 2rem;
@@ -202,6 +205,29 @@ button{
     padding-top: 2rem;
         height: 12rem;
 }
+.centroUni picture img{
+/*        min-width: 100vw;*/
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+.imgAliados{
+   display: flex;
+    
+}
+.imgAliados img{
+    width: 50%;
+}
+.Aliados{
+/*    background-color: white;*/
+}
+.footy{
+        width: 100%;
+        background-color: var(--txtColor);
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 0 1.5rem 0;
+    }
 .bgImg{
     display: none;
 }
@@ -259,17 +285,15 @@ button{
     main{
         padding-top: 5rem;
         background-color: var(--bgColor);
-        height: auto;
+        height: 100%;
     }
     article{
 /*        border: 1px solid;*/
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
+        margin: 5rem 0 0 0;
         width: 100%;
-        height: 100%;
         padding: 0;
     }
     section{
@@ -304,7 +328,7 @@ button{
         margin-left: var(--paddingGeneral);
     }
     .btnHistoria{
-        grid-area: 'footer';
+        grid-area: 'btnHist';
         margin-left: auto;
         margin-right: auto;
         grid-column: 1 / 3;
@@ -317,7 +341,7 @@ button{
         grid-template-areas: 
             "title foto"
             "title foto"
-            "footer footer";
+            "btnHist btnHist";
         column-gap: 3rem;
         padding-top: 5rem;
         
@@ -411,6 +435,9 @@ button{
         display: flex;
         justify-content: center;
     }
+    .imgAliados img{
+        all:unset;
+    }
     .cuau{
         width: 18.75rem;
     }
@@ -438,8 +465,11 @@ button{
     }
     .footy{
         width: 100%;
-        height: 5rem;
         background-color: var(--txtColor);
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 0 1.5rem 0;
+        margin-top: 5rem
     }
     .bgImg{
         display: block;
@@ -475,18 +505,18 @@ button{
         z-index: -1;
     }
     .bg07{
-        top: 3050;
+        top: 3200;
         right: 0;
         width: 45rem;
         z-index: -1;
     }
     .bg08{
-        top: 3350;
+        top: 3450;
         left: 200;
         width: 22rem;
     }
     .bg09{
-        bottom:-4300;
+        top: 5000;
         left: 0;
         z-index: -1;
         width: 25rem;
@@ -521,5 +551,8 @@ button{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .XLscreens{
+        max-width: 130rem;
     }
 }
