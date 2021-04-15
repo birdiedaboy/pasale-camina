@@ -13,14 +13,14 @@
 
 <body> 
 <header>
-	<input type="checkbox" id="nav-toggle" class="nav-toggle">
+	 <input type="checkbox" id="nav-toggle" class="nav-toggle">
 	<nav>
 		<ul>
 			<li><a href="#Hist">HISTORIA</a></li>
-			<li><a href="#">VECINOS</a></li>
+			<li><a href="#Vec">VECINOS</a></li>
 			<li><a href="empresas.html">EMPRESAS</a></li>
-			<li><a href="#">CONCURSO UNIVERSITARIO</a></li>
-			<li><a href="#">ALIADOS</a></li>
+			<li><a href="#Uni">CONCURSO UNIVERSITARIO</a></li>
+			<li><a href="#Ali">ALIADOS</a></li>
 			<li><a href="#">CONTACTO</a></li>
 		</ul>
 	</nav>
@@ -32,7 +32,7 @@
     <article>
       <div class="introPasele">
         <img src="img/logo_Pasale.svg">
-           <h1>Proyecto de rediseño vial por<br>medio del mobiliario urbano</h1>
+           <h1 class="introTXT">Proyecto de rediseño vial por<br>medio del mobiliario urbano</h1>
        </div>
        <img src="img/Aliados.png" class="heroAliados">
         <section class="Historia" id="Hist">
@@ -60,7 +60,7 @@
              REPORTE DE PÁSALE 2019
             </button>
         </section>
-        <section class="Vecinos">
+        <section class="Vecinos" id="Vec">
            <div class="txtVecinos">
             <h2>Vecinos</h2>
             <p>Las personas que viven y transitan por el polígono intervenido en el proyecto Pásale podrán gozar de los beneficios que resultarán de la transformación de las intersecciones.</p>
@@ -122,22 +122,24 @@
             </button>
             </div>
         </section>
-        <section class="centroUni">
+        <section class="centroUni" id="Uni">
             <h2>Concurso Universitario</h2>
             <p>Proximamente</p>
             <picture>
             <img src="img/img_Equipo.png">
             </picture>
         </section>
-        <section class="Aliados">
+        <section class="Aliados" id="Ali">
             <h2>Aliados</h2>
             <div class="imgAliados">
                 <img src="img/Aliados.png">
                 <img src="img/img_Cuau.png" class="cuau">
             </div>
         </section>
-        <section class="Contacto">
+        <section class="Contacto" id="Con">
             <h2>¿Dudas o comentarios?</h2>
+            <h3>Envia un correo a: <a href="mailto:pasale@camina.mx">Pasale@camina.mx</a></h3>
+<!--
             <form method="post" name="contact_form"
             action="contact-form-handler.php">
                 <label for="Name">Nombre:</label>
@@ -151,6 +153,7 @@
 
                 <input type="submit" value="Submit">
             </form>	
+-->
         </section>
         <section class="footy">
     fdgdfgdfgdfgdfgdfg
