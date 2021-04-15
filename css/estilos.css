@@ -44,19 +44,23 @@ h1{
     font-weight: bold;
     font-size: 	2.875rem;
     margin-top: 3rem;
+    color: var(--txtColor);
 }
 h2{
     font-weight: bold;
     font-size: 	2.875rem;
     padding-bottom: 3.25rem;
+    color: var(--txtColor);
 }
 h3{
     font-size: 1.5rem;
     padding-bottom: 1.5rem;
+    color: var(--txtColor);
 }
 p{
     font-size: 1.125rem;
     line-height: 1.5rem;
+    color: var(--txtColor);
 }
 /* Estilo del Nav */
 header{
@@ -230,6 +234,19 @@ button{
     }
 .bgImg{
     display: none;
+}
+.EintroPasele{
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.EintroPasele img{
+    width: 20rem;
+}
+.EinfoTxt h3{
+    margin-top: 3rem;
 }
 /* DKTP Version */
 @media screen and (min-width: 800px) {
@@ -439,7 +456,7 @@ button{
         all:unset;
     }
     .cuau{
-        width: 18.75rem;
+        margin: 5rem;
     }
     .Contacto{
         width: 100%;
