@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/caminamx/pasale.camina.mx
+    - /bin/cp * $DEPLOYPATH
