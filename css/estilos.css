@@ -71,6 +71,10 @@ ol{
     margin-left: 2em;
     padding-bottom: 1em;
 }
+::selection{
+    background: black;
+    color: white;
+}
 /* Estilo del Nav */
 header{
 	background: var(--bgColor);
