@@ -57,10 +57,19 @@ h3{
     padding-bottom: 1.5rem;
     color: var(--txtColor);
 }
+h4{
+    padding: 1.5rem 0;
+    color: var(--txtColor);
+}
 p{
     font-size: 1.125rem;
     line-height: 1.5rem;
     color: var(--txtColor);
+}
+ol{
+    margin-top: .5rem;
+    margin-left: 2em;
+    padding-bottom: 1em;
 }
 /* Estilo del Nav */
 header{
@@ -559,7 +568,7 @@ button{
         
     }
     .EinfoTxt p{
-        margin-bottom: 3rem;
+        margin-bottom: rem;
     }
     .EinfoTxt div{
         margin-bottom: 3rem;
