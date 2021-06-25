@@ -1,4 +1,4 @@
-*{
+*,*::before, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,7 +8,7 @@ ul{
 }
 img{
     display: block;
-    object-fit: contain;
+    width: 100%;
 }
 
 @font-face {
@@ -32,9 +32,6 @@ img{
     --accentGreen: #89b514;
     --paddingGeneral: 10rem;
 }
-*,*::before, *::after{
-	box-sizing: border-box;
-}
 body{
 	background: var(--bgColor);
 	font-family: 'Inter', sans-serif;
@@ -53,9 +50,10 @@ h2{
     color: var(--txtColor);
 }
 h3{
-    font-size: 1.5rem;
-    padding-bottom: 1.5rem;
+    font-size: 1.625rem;
+    padding-bottom: 2.5rem;
     color: var(--txtColor);
+    
 }
 h4{
     padding: 1.5rem 0;
@@ -63,7 +61,7 @@ h4{
 }
 p{
     font-size: 1rem;
-    line-height: 20px;
+    line-height: 1.5;
     color: var(--txtColor);
 }
 ol{
@@ -77,7 +75,7 @@ ol{
 }
 
 /* Estilo del Nav */
-header{
+.topNAV{
 	background: var(--bgColor);
 	text-align: center;
 	position: fixed;
@@ -262,12 +260,22 @@ button{
 .EinfoTxt h3{
     margin-top: 3rem;
 }
+.qopIMG{
+        display: flex;
+    flex-wrap: wrap;
+        width: 100%;
+            gap: 1em;
+    }
+    .qopIMG img{
+        width: 30%;
+        object-fit: scale-down;
+    }
 /* DKTP Version */
 @media screen and (min-width: 800px) {
 	.nav-toggle-label{
 		display: none;
 	}
-	header{
+	.topNAV{
 		display: grid;
 		grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
         height: 5rem;
@@ -586,4 +594,70 @@ button{
     .XLscreens{
         max-width: 130rem;
     }
+    .qopIMG{
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    .qopIMG img{
+        width: 100%;
+    }
+    .introEmpresa{
+        width: 100%;
+        min-height: 400px;
+        background: url(../img/intro_empresas.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    .dis{
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 2em;
+        gap:2em
+    }
+    .dis p{
+        width: 100%;
+        margin-left: 2em;
+    }
+    .dis::before{
+        content: '';
+        height: 52px;
+        width: 52px;
+        border-radius: 100%;
+        border: solid 8px #27A0D7;
+        position: absolute;
+        left: 0;
+        top: 20%;
+    }
+    .dis::after{
+        content: '';
+        height: 52px;
+        width: 52px;
+        border-radius: 100%;
+        border: solid 8px #8AB329;
+        position: absolute;
+        right: 45%;
+        top: 20%;
+    }
+    
+}
+.space{
+    margin-top: 5rem;
+}
+.spaceBottom{
+    margin-bottom:2rem;
+}
+.empresaM li{
+    padding: 0.5em 0;
+}
+.requisitos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
