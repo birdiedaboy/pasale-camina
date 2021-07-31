@@ -1,30 +1,34 @@
-*,*::before, *::after{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-ul{
+
+ul {
     list-style: none;
 }
-img{
+
+img {
     display: block;
     width: 100%;
 }
 
 @font-face {
-  font-family: Inter;
-  src: url("fonts/Inter-Bold.ttf") format("truetype");
-  font-weight: bold;
+    font-family: Inter;
+    src: url("fonts/Inter-Bold.ttf") format("truetype");
+    font-weight: bold;
 }
 
 @font-face {
-  font-family: Inter;
-  src: url("fonts/Inter-Medium.ttf") format("truetype");
-  font-weight: normal;
+    font-family: Inter;
+    src: url("fonts/Inter-Medium.ttf") format("truetype");
+    font-weight: normal;
 }
 
-:root{
-	--bgColor: #ede7e4;
+:root {
+    --bgColor: #ede7e4;
     --txtColor: #302c27;
     --accentBlue: #27a0d7;
     --accentYellow: #ffbc0b;
@@ -32,180 +36,210 @@ img{
     --accentGreen: #89b514;
     --paddingGeneral: 10rem;
 }
-body{
-	background: var(--bgColor);
-	font-family: 'Inter', sans-serif;
+
+body {
+    background: var(--bgColor);
+    font-family: 'Inter', sans-serif;
     overflow-x: hidden;
 }
-h1{
+
+h1 {
     font-weight: bold;
-    font-size: 	2.875rem;
+    font-size: 2.875rem;
     margin-top: 3rem;
     color: var(--txtColor);
 }
-h2{
+
+h2 {
     font-weight: bold;
-    font-size: 	2.875rem;
+    font-size: 2.875rem;
     padding-bottom: 3.25rem;
     color: var(--txtColor);
 }
-h3{
+
+h3 {
     font-size: 1.625rem;
     padding-bottom: 2.5rem;
     color: var(--txtColor);
-    
+
 }
-h4{
+
+h4 {
     padding: 1.5rem 0;
     color: var(--txtColor);
 }
-p{
+
+p {
     font-size: 1rem;
     line-height: 1.5;
     color: var(--txtColor);
 }
-ol{
+
+ol {
     margin-top: .5rem;
     margin-left: 2em;
     padding-bottom: 1em;
 }
-::selection{
+
+::selection {
     background: black;
     color: white;
 }
 
 /* Estilo del Nav */
-.topNAV{
-	background: var(--bgColor);
-	text-align: center;
-	position: fixed;
-	width: 100%;
-	z-index: 666;
+.topNAV {
+    background: var(--bgColor);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 666;
 }
-.logo{
-	margin: 1.5em 0;
-	
+
+.logo {
+    margin: 1.5em 0;
+
 }
-.nav-toggle{
-	display: none;
+
+.nav-toggle {
+    display: none;
 }
-.nav-toggle-label{
-	position: absolute;
-	top: 0;
-	left: 0;
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin-top: 1rem;
-	margin-left: 1em;
-	height: 100%;
-	display: flex;
-	align-items: center;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .nav-toggle-label span,
 .nav-toggle-label span::before,
-.nav-toggle-label span::after{
-	display: block;
-	background: var(--txtColor);
-	height: 3px;
-	width: 2em;
-	position: relative;
-	
+.nav-toggle-label span::after {
+    display: block;
+    background: var(--txtColor);
+    height: 3px;
+    width: 2em;
+    position: relative;
+
 }
+
 .nav-toggle-label span::before,
-.nav-toggle-label span::after{
-	content:'';
-	position: absolute;
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
 }
-.nav-toggle-label span::before{
-	bottom: 7px;
+
+.nav-toggle-label span::before {
+    bottom: 7px;
 }
-.nav-toggle-label span::after{
-	top: 7px;
+
+.nav-toggle-label span::after {
+    top: 7px;
 }
-nav{
-	position: absolute;
-	text-align: left;
-	top: 100%;
-	left: 0;
-	background: var(--bgColor);
-	width: 100%;
-	transform: scale(1, 0);
-	transform-origin: top;
-	transition: transform 400ms ease-in-out;
-	
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--bgColor);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+
 }
-nav ul{
+
+nav ul {
     margin-top: 3rem;
 }
 
 nav li {
-	margin-bottom: 1em;
-	margin-left: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
 }
 
-nav a{
-	color: var(--txtColor);
-	text-decoration: none;
-	font-size: 	1.25rem;
+nav a {
+    color: var(--txtColor);
+    text-decoration: none;
+    font-size: 1.25rem;
     font-weight: bold;
-	opacity: 0;
-	transition: opacity 150ms ease-in-out;
-}
-nav a:hover{
-	color: var(--accentRed);
-}
-.nav-toggle:checked ~ nav {
-	transform: scale(1,1);
-}
-.nav-toggle:checked ~ nav a {
-	opacity: 1;
-	transition: opacity 250ms ease-in-out 250ms;
-}
-.nav-toggle:checked nav-toggle-label span{
-	opacity: 0;
-}
-.nav-toggle:checked span::before{
-	transform: rotate(45deg);
-}
-.nav-toggle:checked span::after{
-	transform: rotate(-45deg);
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
 }
 
-.introPasele img{
+nav a:hover {
+    color: var(--accentRed);
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle:checked nav-toggle-label span {
+    opacity: 0;
+}
+
+.nav-toggle:checked span::before {
+    transform: rotate(45deg);
+}
+
+.nav-toggle:checked span::after {
+    transform: rotate(-45deg);
+}
+
+.introPasele img {
     width: 22rem;
     margin: 0 auto;
     margin-top: 3.5rem
-        
-    }
-.introTXT{
+}
+
+.introTXT {
     margin-top: 5rem;
     text-align: center;
 }
-.introPasele{
+
+.introPasele {
     margin-bottom: 5rem;
 }
-.introLogos{
+
+.introLogos {
     z-index: 100;
-    
+
 }
-.heroAliados{
+
+.heroAliados {
     margin-bottom: 5rem;
 }
-article{
+
+article {
     display: flex;
     flex-direction: column;
     align-content: center;
     margin: 0 2rem 0 2rem;
 }
-section{
+
+section {
     margin-top: 5rem;
 }
-.txtHistoria{
+
+.txtHistoria {
     margin-bottom: 2rem;
 }
-.imgHistoria{
+
+.imgHistoria {
     width: 100%;
 }
-button{
+
+button {
     border: none;
     background-color: var(--txtColor);
     color: var(--bgColor);
@@ -218,121 +252,143 @@ button{
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
-.segProCon div figure{
+
+.segProCon div figure {
     display: flex;
-        justify-content: center;
-        padding-bottom: 2rem;
+    justify-content: center;
+    padding-bottom: 2rem;
     padding-top: 2rem;
-        height: 12rem;
+    height: 12rem;
 }
-.centroUni picture img{
-/*        min-width: 100vw;*/
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-.imgAliados{
-   display: flex;
-    
+
+.centroUni picture img {
+    /*        min-width: 100vw;*/
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
-.imgAliados img{
+
+.imgAliados {
+    display: flex;
+
+}
+
+.imgAliados img {
     width: 50%;
 }
-.Aliados{
-/*    background-color: white;*/
+
+.Aliados {
+    /*    background-color: white;*/
 }
-.footy{
-        width: 100%;
-        background-color: var(--txtColor);
-        display: flex;
-        justify-content: center;
-        padding: 1.5rem 0 1.5rem 0;
-    }
-.bgImg{
+
+.footy {
+    width: 100%;
+    background-color: var(--txtColor);
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+.bgImg {
     display: none;
 }
-.EintroPasele{
+
+.EintroPasele {
     padding-top: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 5rem;
 }
-.EintroPasele img{
+
+.EintroPasele img {
     width: 20rem;
 }
-.EinfoTxt h3{
+
+.EinfoTxt h3 {
     margin-top: 3rem;
 }
-.qopIMG{
-        display: flex;
+
+.qopIMG {
+    display: flex;
     flex-wrap: wrap;
-        width: 100%;
-            gap: 1em;
+    width: 100%;
+    gap: 1em;
     background-color: white;
-    }
-    .qopIMG img{
-        width: 30%;
-        object-fit: scale-down;
-    }
+}
+
+.qopIMG img {
+    width: 30%;
+    object-fit: scale-down;
+}
+
 /* DKTP Version */
 @media screen and (min-width: 800px) {
-	.nav-toggle-label{
-		display: none;
-	}
-	.topNAV{
-		display: grid;
-		grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-        height: 5rem;
-	}
-	.logo{
-		grid-column: 2 / span 1;
-	}
-	nav{
-		all: unset;
-		grid-column: 3 / 4;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	nav ul{ 
-		display: flex;
-        margin-top: 0;
-	}
-	nav li{
-		margin-left: 3em;
-		margin-bottom: 0;
-	}
-	nav a{
-		opacity: 1;
-		position: relative;
-	}
-	nav a::before {
-		content:'';
-		display: block;
-		height: 4px;
-		background: var(--accentRed);
-		width: 100%;
-		position: absolute;
-		top: -.75em;
-		left: 0;
-		right: 0;
-		transform: scale(0, 1);
-		transform-origin: right;
-		transition: transform ease-in-out 250ms;
+    .nav-toggle-label {
+        display: none;
+    }
 
-	}
-	nav a:hover::before{
-		transform: scale(1,1);
-	}
-    
-    main{
+    .topNAV {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        height: 5rem;
+    }
+
+    .logo {
+        grid-column: 2 / span 1;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        margin-top: 0;
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 4px;
+        background: var(--accentRed);
+        width: 100%;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transform-origin: right;
+        transition: transform ease-in-out 250ms;
+
+    }
+
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+
+    main {
         padding-top: 5rem;
         background-color: var(--bgColor);
         height: 100%;
     }
-    article{
-/*        border: 1px solid;*/
+
+    article {
+        /*        border: 1px solid;*/
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -340,15 +396,18 @@ button{
         width: 100%;
         padding: 0;
     }
-    section{
-/*        background: var(--accentRed);*/
+
+    section {
+        /*        background: var(--accentRed);*/
         margin-top: 10rem;
-/*        max-width: 95vw;*/
+        /*        max-width: 95vw;*/
     }
-    .heroAliados{
+
+    .heroAliados {
         margin-top: 25%;
     }
-    .introPasele{
+
+    .introPasele {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -356,88 +415,100 @@ button{
         padding-right: var(--paddingGeneral);
         z-index: 2;
     }
-    .introPasele img{
+
+    .introPasele img {
         width: 40rem;
-        margin:  0;
-        
+        margin: 0;
+
     }
-    .imgHistoria{
+
+    .imgHistoria {
         grid-area: foto;
         justify-self: center;
         margin-right: var(--paddingGeneral);
         width: 80%
     }
-    .txtHistoria{
+
+    .txtHistoria {
         grid-area: title;
         margin-left: var(--paddingGeneral);
     }
-    .btnHistoria{
+
+    .btnHistoria {
         grid-area: 'btnHist';
         margin-left: auto;
         margin-right: auto;
         grid-column: 1 / 3;
         margin-top: 5rem;
     }
-    .Historia{
+
+    .Historia {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        grid-template-areas: 
+        grid-template-areas:
             "title foto"
             "title foto"
             "btnHist btnHist";
         column-gap: 3rem;
         padding-top: 5rem;
-        
+
     }
-    .Vecinos{
+
+    .Vecinos {
         padding-right: var(--paddingGeneral);
         padding-left: var(--paddingGeneral);
     }
-    .txtVecinos{
+
+    .txtVecinos {
         width: 50%;
         max-width: 50ch;
     }
-    .segProCon{
+
+    .segProCon {
         display: flex;
         justify-content: space-between;
         margin-top: 3rem;
-        
+
     }
-    .segProCon div{
+
+    .segProCon div {
         width: 30%;
-/*        max-width: 40ch;*/
-        
+        /*        max-width: 40ch;*/
+
     }
-    .segProCon div figure{
+
+    .segProCon div figure {
         display: flex;
         justify-content: center;
         padding-bottom: 2rem;
         height: 12rem;
-        
+
     }
-    .txtVIcon{
-        
-        
-    }
-    .Empresas{
+
+    .txtVIcon {}
+
+    .Empresas {
         width: 100%;
         padding-right: var(--paddingGeneral);
         padding-left: var(--paddingGeneral);
         margin-bottom: 15rem;
     }
-    .txtEmpresas{
+
+    .txtEmpresas {
         width: 50%;
         margin-bottom: 8rem;
         max-width: 50ch;
     }
-    .btnEmpresas{
+
+    .btnEmpresas {
         width: 100%;
         display: flex;
         justify-content: center;
-        
+
     }
-    button{
+
+    button {
         border: none;
         background-color: var(--txtColor);
         color: var(--bgColor);
@@ -448,23 +519,29 @@ button{
         width: 406px;
         cursor: pointer;
     }
-    .centroUni{
+
+    .centroUni {
         width: 100%;
     }
-    .centroUni h2, .centroUni p{
+
+    .centroUni h2,
+    .centroUni p {
         padding-right: var(--paddingGeneral);
         padding-left: var(--paddingGeneral);
     }
-    .centroUni p{
+
+    .centroUni p {
         margin-bottom: 5rem;
     }
-    .centroUni picture img{
-/*        min-width: 100vw;*/
+
+    .centroUni picture img {
+        /*        min-width: 100vw;*/
         width: 100%;
         height: auto;
         object-fit: contain;
     }
-    .Aliados{
+
+    .Aliados {
         width: 100%;
         padding-right: var(--paddingGeneral);
         padding-left: var(--paddingGeneral);
@@ -475,39 +552,47 @@ button{
         padding-bottom: 8rem;
         margin-top: 0;
     }
-    .imgAliados{
+
+    .imgAliados {
         display: flex;
         justify-content: center;
     }
-    .imgAliados img{
-        all:unset;
+
+    .imgAliados img {
+        all: unset;
     }
-    .cuau{
+
+    .cuau {
         margin: 5rem;
     }
-    .Contacto{
+
+    .Contacto {
         width: 100%;
         padding-right: var(--paddingGeneral);
         padding-left: var(--paddingGeneral);
     }
-    form{
+
+    form {
         display: flex;
         flex-direction: column;
         width: 50%;
     }
-    label{
+
+    label {
         margin-bottom: 1rem;
-        font-size: 	1.5rem;
+        font-size: 1.5rem;
         font-weight: bold;
     }
-    input{
+
+    input {
         height: 3rem;
         padding: 0;
         margin: 0;
         border: none;
-        margin-bottom: 2rem;   
+        margin-bottom: 2rem;
     }
-    .footy{
+
+    .footy {
         width: 100%;
         background-color: var(--txtColor);
         display: flex;
@@ -515,127 +600,162 @@ button{
         padding: 1.5rem 0 1.5rem 0;
         margin-top: 5rem
     }
-    .bgImg{
+
+    .bgImg {
         display: block;
         width: 30rem;
         position: absolute;
         z-index: 1;
     }
-    .bg01{
+
+    .bg01 {
         top: 150;
         left: 100;
     }
-    .bg02{
+
+    .bg02 {
         top: 500;
         left: 400;
     }
-     .bg03{
+
+    .bg03 {
         top: 700;
         left: 0;
     }
-    .bg04{
+
+    .bg04 {
         top: 800;
         right: 0;
     }
-    .bg05{
+
+    .bg05 {
         top: 1500;
         right: 0;
         z-index: -1;
         width: 70rem
     }
-    .bg06{
+
+    .bg06 {
         top: 2400;
         left: 0;
         z-index: -1;
     }
-    .bg07{
+
+    .bg07 {
         top: 3200;
         right: 0;
         width: 45rem;
         z-index: -1;
     }
-    .bg08{
+
+    .bg08 {
         top: 3450;
         left: 200;
         width: 22rem;
     }
-    .bg09{
+
+    .bg09 {
         top: 5000;
         left: 0;
         z-index: -1;
         width: 25rem;
     }
 
-/*    Seccion Empresas */
-    .EintroPasele{
+    /*    Seccion Empresas */
+    .EintroPasele {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         z-index: 2;
     }
-    .EintroPasele img{
+
+    .EintroPasele img {
         width: 40rem;
-        margin:  0;
-        
+        margin: 0;
+
     }
-    .EinfoTxt{
+
+    .EinfoTxt {
         max-width: 90ch;
-/*        display: flex;*/
+        /*        display: flex;*/
         align-items: flex-start;
-        
+        z-index: 5;
+
     }
-    .EinfoTxt p{
+
+    .EinfoTxt p {
         margin-bottom: rem;
     }
-    .EinfoTxt div{
+
+    .EinfoTxt div {
         margin-bottom: 3rem;
     }
-    .EmpresaM{
+
+    .EmpresaM {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .XLscreens{
+
+    .XLscreens {
         max-width: 130rem;
     }
-    .qopIMG{
+
+    .qopIMG {
         flex-wrap: nowrap;
         width: 100%;
         max-height: 10rem;
     }
-    .qopIMG img{
+
+    .qopIMG img {
         width: 100%;
     }
-    .introEmpresa{
+
+    .introEmpresa {
         width: 100%;
-        min-height: 400px;
+        min-height: 25vw;
         background: url(../img/intro_empresas.png);
         background-size: cover;
         background-position: center;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+    }
+
+    .introEmpresa::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        background-color: var(--accentYellow);
+        height: 65rem;
+        z-index: 1;
+        top: 100%;
+        
         
         
     }
-    .dis{
+
+    .dis {
         width: 100%;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-/*        padding: 2em;*/
-        gap:2em;
+        /*        padding: 2em;*/
+        gap: 2em;
     }
-    .dis p{
+
+    .dis p {
         width: 100%;
         padding-left: 2em;
         text-align: end;
         padding-top: 1em;
-      
+
     }
-    .dis::before{
+
+    .dis::before {
         content: '';
         height: 52px;
         width: 52px;
@@ -645,7 +765,8 @@ button{
         left: 0;
         top: 20%;
     }
-    .dis::after{
+
+    .dis::after {
         content: '';
         height: 52px;
         width: 52px;
@@ -655,29 +776,34 @@ button{
         right: 38%;
         top: 20%;
     }
-    
-}
-.space{
+
+
+.space {
     margin-top: 5rem;
 }
-.spaceBottom{
-    margin-bottom:2rem;
+
+.spaceBottom {
+    margin-bottom: 2rem;
 }
-.empresaM li{
+
+.empresaM li {
     padding: 0.5em 0;
 }
-.requisitos{
+
+.requisitos {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.crono{
+
+.crono {
     padding: 0 0 4rem 0;
     width: 100%;
     position: relative;
-    
+
 }
-.crono ::after{ 
+
+.crono ::after {
     inset: 0;
     content: '';
     left: -10%;
