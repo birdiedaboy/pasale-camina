@@ -183,6 +183,10 @@ nav a:hover{
 .introPasele{
     margin-bottom: 5rem;
 }
+.introLogos{
+    z-index: 100;
+    
+}
 .heroAliados{
     margin-bottom: 5rem;
 }
@@ -265,6 +269,7 @@ button{
     flex-wrap: wrap;
         width: 100%;
             gap: 1em;
+    background-color: white;
     }
     .qopIMG img{
         width: 30%;
@@ -597,6 +602,7 @@ button{
     .qopIMG{
         flex-wrap: nowrap;
         width: 100%;
+        max-height: 10rem;
     }
     .qopIMG img{
         width: 100%;
@@ -664,4 +670,20 @@ button{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+.crono{
+    padding: 0 0 4rem 0;
+    width: 100%;
+    position: relative;
+    
+}
+.crono ::after{ 
+    inset: 0;
+    content: '';
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    background-color: var(--accentYellow);
+    position: absolute;
+    z-index: -1;
 }
